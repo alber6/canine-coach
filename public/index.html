@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canine Coach AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐾 Canine Coach AI</h1>
+            <p>Tu etólogo y nutricionista canino virtual</p>
+        </header>
+
+<main class="dashboard">
+            <div class="panel-izquierdo">
+                <form id="dogForm" class="card">
+                    <div class="form-group">
+                        <label>Raza del perro:</label>
+                        <input type="text" id="raza" placeholder="Ej: Border Collie" required>
+                    </div>
+                    <div class="form-group row">
+                        <div>
+                            <label>Edad:</label>
+                            <input type="text" id="edad" placeholder="Ej: 8 meses" required>
+                        </div>
+                        <div>
+                            <label>Peso:</label>
+                            <input type="text" id="peso" placeholder="Ej: 15 kg" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Nivel de Actividad:</label>
+                        <select id="actividad" required>
+                            <option value="Bajo">Bajo (Paseos cortos)</option>
+                            <option value="Medio">Medio (1-2 horas diarias)</option>
+                            <option value="Alto">Alto (Perro de trabajo/deporte)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>¿Cuál es el problema principal?</label>
+                        <textarea id="problema" rows="3" placeholder="Ej: Muerde los muebles cuando se queda solo" required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn">Analizar Perfil 🦴</button>
+                </form>
+            </div>
+
+            <div class="panel-derecho">
+                <div id="loader" class="hidden card">
+                    <p>🧠 La IA está analizando el caso...</p>
+                </div>
+
+                <div id="resultados" class="hidden">
+                    <div class="result-card">
+                        <h3>🧠 Análisis Psicológico</h3>
+                        <p id="res-psico"></p>
+                    </div>
+                    <div class="result-card">
+                        <h3>🎾 Plan de Adiestramiento</h3>
+                        <ul id="res-plan"></ul>
+                    </div>
+                    <div class="result-card">
+                        <h3>🍖 Recomendación Nutricional</h3>
+                        <p id="res-nutri"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
